@@ -26,11 +26,32 @@ Ingredient.create!(name: "Apricot brandy")
 puts 'Cleaning Cocktails database...'
 Cocktail.destroy_all
 puts 'Creating Cocktails...'
-Cocktail.create!(name: "Cocktail 1.1")
-Cocktail.create!(name: "Cocktail 1.2")
-Cocktail.create!(name: "Cocktail 1.3")
-Cocktail.create!(name: "Cocktail 1.4")
-Cocktail.create!(name: "Cocktail 1.5")
+
+cocktail = Cocktail.new
+cocktail.name = "Cockti 101"
+cocktail.remote_photo_url = 'https://res.cloudinary.com/diflsxpwh/image/upload/v1533882435/525x525_roman-cosmo-martini-cocktail.jpg'
+cocktail.save!
+
+cocktail = Cocktail.new
+cocktail.name = "Cockti 102"
+cocktail.remote_photo_url = 'https://res.cloudinary.com/diflsxpwh/image/upload/v1533882460/bigstock-142897766.jpg'
+cocktail.save!
+
+cocktail = Cocktail.new
+cocktail.name = "Cockti 103"
+cocktail.remote_photo_url = 'https://res.cloudinary.com/diflsxpwh/image/upload/v1533882470/copper-king-6_2000x1500.webp'
+cocktail.save!
+
+cocktail = Cocktail.new
+cocktail.name = "Cockti 104"
+cocktail.remote_photo_url = 'https://res.cloudinary.com/diflsxpwh/image/upload/v1533882471/Percy-on-the-Beach-Cocktail-5-600x800.jpg'
+cocktail.save!
+
+cocktail = Cocktail.new
+cocktail.name = "Cockti 105"
+cocktail.remote_photo_url = 'https://res.cloudinary.com/diflsxpwh/image/upload/v1533882471/hub_classic_cocktail_daiquiri.jpg'
+cocktail.save!
+
 
 ing  = Ingredient.all
 c = Cocktail.all
@@ -40,3 +61,4 @@ Dose.create!(description: "2 ml", cocktail_id: c[1].id, ingredient_id: ing[1].id
 Dose.create!(description: "3 ml", cocktail_id: c[1].id, ingredient_id: ing[3].id)
 Dose.create!(description: "4 ml", cocktail_id: c[2].id, ingredient_id: ing[4].id)
 puts 'Finished!'
+
