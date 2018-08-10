@@ -1,7 +1,12 @@
 <div class="cocktail-details">
   <h2><%= @cocktail.name %></h2>
   <!-- image of cocktail -->
-  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    <% if @cocktail.photo.present? %>
+        <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    <% else %>
+        <%= cl_image_tag "cocktail-card-background.jpg", height: 300, width: 400, crop: :fill %>
+    <% end %>
+
   <!-- display Doses here -->
   <%  @cocktail.doses.each do |dose| %>
     <br>
