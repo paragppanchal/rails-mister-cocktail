@@ -1,24 +1,17 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
-    <img src="../../assets/images/logo.png" alt="logo">
+    <%= image_tag('cocktail_logo.png') %>
   </a>
+
+  <!-- All Heading -->
+  <h1 class=navbar-heading>Cockti</h1>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to 'Add a new cockrail', new_cocktail_path %></a>
+    <%= link_to 'Add cocktail', new_cocktail_path, class: 'navbar-wagon-item navbar-wagon-link' %>
 
-    <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-      </div>
-    </div>
   </div>
 </div>
+

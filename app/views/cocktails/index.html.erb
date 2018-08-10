@@ -1,6 +1,3 @@
-<h1>Cocktails</h1>
-
-
 <div class="container">
   <div class="row">
 
@@ -15,12 +12,11 @@
               <p></p>
             </div>
             <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
-            <a class="card-link" href="#" ></a>
+            <!-- <a class="card-link" href="" ></a> -->
+            <%= link_to 'Show', cocktail_path(cocktail), class: 'card-link'  %>
           </div>
         </div>
       <% end %>
 
   </div>
 </div>
-
-<%= link_to 'Add a new cockrail', new_cocktail_path %>
